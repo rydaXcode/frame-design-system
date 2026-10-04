@@ -20,7 +20,7 @@ Not a finished system. A starting point.
 | [`tokens.json`](./tokens.json) | Every token, in [Tokens Studio](https://tokens.studio) format. Light and Dark themes included |
 | [`CHANGELOG.md`](./CHANGELOG.md) | Every change to the system, with a template for your own |
 
-The Figma file is free on Gumroad: **Frame UI – PRO LITE (FREE)**. <!-- add Gumroad link -->
+The Figma file is free on Gumroad: **[Get Frame UI →](https://designxmachine.gumroad.com/l/frame-ui)**
 
 ## How to use it
 
