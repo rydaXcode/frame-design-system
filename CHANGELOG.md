@@ -23,8 +23,8 @@ First release of Frame.
 
 ### Added
 - **Tokens**
-  - Primitives: `neutral` (50–950), `blue`, `green`, `red`, `amber` (50–900), `white`, `black`
-  - Semantic colour tokens with Light and Dark modes: `bg`, `surface`, `text`, `border`, `brand`, `status`
+  - Primitives: `neutral` (50–950), `lime`, `blue`, `green`, `red`, `amber` (50–900), `white`, `black`
+  - Semantic colour tokens with Light and Dark modes: `bg`, `surface`, `text`, `border`, `brand` (near-black + lime), `status` (success, error, warning, info)
   - Spacing scale on a 4px base: `space.0`–`space.24`
   - Radius scale: `radius.none`–`radius.full`
   - Type scale in Inter: Display, Heading, Body, Label, Caption, Overline

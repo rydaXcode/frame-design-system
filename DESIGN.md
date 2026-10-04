@@ -42,7 +42,7 @@ Three layers. Components only touch the middle one.
 
 | Layer | What it holds | Who uses it |
 |---|---|---|
-| **Primitives** | Raw values: `neutral.50`–`950`, `blue`, `green`, `red`, `amber` (50–900), `white`, `black` | Semantic tokens only |
+| **Primitives** | Raw values: `neutral.50`–`950`, `lime`, `blue`, `green`, `red`, `amber` (50–900), `white`, `black` | Semantic tokens only |
 | **Semantic** | Meaning: `bg`, `surface`, `text`, `border`, `brand`, `status`. Has **Light** and **Dark** modes | Components and layouts |
 | **Scales** | `space`, `radius`, `type`, `shadow` | Components and layouts |
 
@@ -81,18 +81,25 @@ Rule: Figma uses `/`, tokens use `.`, CSS uses `-` with a category prefix. The w
 | `color.border.default` | neutral.200 | neutral.700 | Inputs, cards, dividers that need to be seen |
 | `color.border.subtle` | neutral.100 | neutral.800 | Table rows, quiet separators |
 | `color.border.strong` | neutral.300 | neutral.600 | Hover borders, emphasis |
-| `color.brand.primary` | blue.600 | blue.500 | Primary actions, focus, selected states |
-| `color.brand.secondary` | blue.50 | blue.900 | Selected backgrounds, info fills, avatars |
-| `color.brand.text` | blue.600 | blue.400 | Links, active tabs, brand-coloured text |
+| `color.brand.primary` | neutral.950 | lime.300 | Primary actions, focus, checked states |
+| `color.brand.secondary` | lime.100 | lime.900 | Selected backgrounds, avatars, Primary badge |
+| `color.brand.text` | lime.700 | lime.300 | Links, active nav, brand-coloured text |
+| `color.brand.accent` | lime.300 | lime.300 | Highlights, marketing, decorative accents. Never for text on white |
 | `color.status.success` | green.600 | green.500 | Success icons and text |
 | `color.status.success-bg` | green.50 | green.900 | Success fills |
 | `color.status.error` | red.600 | red.500 | Errors, destructive actions |
 | `color.status.error-bg` | red.50 | red.900 | Error fills |
 | `color.status.warning` | amber.600 | amber.500 | Warnings |
 | `color.status.warning-bg` | amber.50 | amber.900 | Warning fills |
+| `color.status.info` | blue.600 | blue.400 | Info icons, borders and text |
+| `color.status.info-bg` | blue.50 | blue.900 | Info fills |
+
+### Brand
+
+Frame UI is **near-black and lime**. In Light mode, primary actions are near-black with white text. In Dark mode they flip to lime (`#CAF76F`) with near-black text. Lime is the accent; it is never used as a text colour on white (use `color.brand.text`).
 
 ### Colour rules
-- Text on `color.brand.primary` is always `color.text.inverse`.
+- Text on `color.brand.primary` is always `color.text.inverse` (white in Light, near-black in Dark).
 - Status colours are for status. Don't use `color.status.success` as a decorative green.
 - Pair every status colour with an icon or label. Colour is never the only signal.
 - Body text uses `color.text.primary` or `color.text.secondary`. `color.text.tertiary` is not for anything a user must read.
@@ -248,7 +255,7 @@ Rules
 #### Alert
 - **Type**: `Info` | `Success` | `Warning` | `Error` · **Props**: `Title`, `Description`
 - Inline and persistent. Use for messages about the content on screen.
-- **Tokens**: radius `radius.md`; each type uses its `status.*` (or `brand.*` for Info) colour and matching `-bg` fill
+- **Tokens**: radius `radius.md`; each type uses its `status.*` colour and matching `-bg` fill (`status.info` for Info)
 
 #### Toast
 - **Type**: `Success` | `Error` | `Warning` | `Info` · **Props**: `Title`, `Description`
