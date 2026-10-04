@@ -1,4 +1,4 @@
-# Frame
+# Frame UI
 
 **A design system blueprint for designers starting from scratch — with the DESIGN.md that helps an AI agent understand it.**
 
