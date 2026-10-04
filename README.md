@@ -8,7 +8,7 @@ By [Design x Machine](https://designxmachine.beehiiv.com) · Free · v1.0
 
 You open a new Figma file. You create the first frame. Then you're staring at an empty page wondering where to begin.
 
-Frame is that beginning. Tokens, type, spacing, radius, elevation and 21 components — each with a name, a token, a rule and a place in the system. Plus the written half: a `DESIGN.md` your coding agent can actually read.
+Frame is that beginning. Tokens, type, spacing, radius, elevation, 21 components and 36 icons — each with a name, a token, a rule and a place in the system. Plus the written half: a `DESIGN.md` your coding agent can actually read.
 
 Not a finished system. A starting point.
 
@@ -56,6 +56,12 @@ In Figma, open Tokens Studio, add this repo as a GitHub sync provider, and pull.
 
 Frame came out of a five-part series on making design systems machine-readable. Start at Part 1 on [Design x Machine](https://designxmachine.beehiiv.com).
 
+## Built for React + Tailwind + shadcn/ui
+
+Component names follow [shadcn/ui](https://ui.shadcn.com) and icons are [Lucide](https://lucide.dev), so what you design in Figma matches what you (or your AI agent) build in code.
+
 ## License
 
 Free to use in personal and commercial projects. Please don't resell Frame itself as a template or UI kit.
+
+Icons: [Lucide](https://lucide.dev), ISC licence.

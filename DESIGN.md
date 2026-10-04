@@ -181,7 +181,7 @@ In Dark mode, prefer `color.surface.elevated` over stronger shadows to show dept
 
 ## 7. Components
 
-Frame ships 21 components. Property names below match Figma exactly.
+Frame ships 21 components and 36 icons. Property names below match Figma exactly. Component names follow shadcn/ui where one exists, so design and code use the same words.
 
 ### Actions
 
@@ -226,9 +226,10 @@ Rules
 - **Selected**: `Off` | `On` · **State**: `Default` | `Disabled`
 - For one choice from a small set. Always in a group; never a single radio.
 
-#### Toggle
+#### Switch
 - **State**: `Off` | `On` · **Enabled**: `Yes` | `No`
 - For settings that apply immediately. If the user has to press Save, use a Checkbox instead.
+- Maps to shadcn/ui `Switch`.
 
 ### Navigation
 
@@ -238,13 +239,14 @@ Rules
 - Current page link uses `color.text.primary`; others use `color.text.secondary`.
 
 #### Nav Item
-- **State**: `Default` | `Hover` | `Active` · **Props**: `Label`, `Show Icon`
+- **State**: `Default` | `Hover` | `Active` · **Props**: `Label`, `Show Icon`, `Icon` (swap any Lucide icon)
 - **Tokens**: padding `space.2` / `space.3`, gap `space.3`, radius `radius.md`; Active fill `color.brand.secondary`, Active text `color.brand.text`; Hover fill `color.bg.secondary`
 - One `Active` item per navigation.
 
-#### Tab Item
+#### Tab
 - **State**: `Active` | `Inactive`
 - Use to switch views of the same content. Not for navigating between pages.
+- Maps to shadcn/ui `Tabs` (`TabsTrigger`).
 
 #### Breadcrumb Item
 - **Type**: `Link` | `Current` | `Separator`
@@ -289,8 +291,9 @@ Rules
 #### List Item
 - **Type**: `Default` | `With Description` | `With Icon` · **Props**: `Title`
 
-#### Divider
+#### Separator
 - **Direction**: `Horizontal` | `Vertical` · Colour `color.border.subtle`
+- Maps to shadcn/ui `Separator`.
 - Prefer spacing over dividers. Use a divider when spacing alone doesn't separate groups.
 
 ### Containers
@@ -300,14 +303,23 @@ Rules
 - **Tokens**: fill `color.surface.default`, radius `radius.lg`, title `type.heading.h4`, description `type.body.sm`
 - Don't nest cards inside cards.
 
-#### Modal
+#### Dialog
 - Title (`type.heading.h3`), body text, and an action row: `Secondary` cancel on the left, `Primary` (or `Danger`) confirm on the right.
 - **Tokens**: fill `color.surface.default`, radius `radius.lg`, `shadow.xl`
 - Use for decisions that block the flow. Anything else belongs on the page.
+- Maps to shadcn/ui `Dialog`.
 
 ---
 
-## 8. Accessibility
+## 8. Icons
+
+- Icons are from [Lucide](https://lucide.dev) (ISC licence): 24px grid, 2px stroke, round caps.
+- In code, use `lucide-react` with the same icon name as Figma (`Icon/settings` → `<Settings />`).
+- Default size 20px inside controls and nav, 16px inside small buttons and badges.
+- Icon colour follows the text colour of the component it sits in. Never colour icons with primitives.
+- An icon that carries meaning on its own needs an `aria-label`.
+
+## 9. Accessibility
 
 - Text contrast meets WCAG 2.1 AA: 4.5:1 for body text, 3:1 for large text and UI boundaries.
 - Every interactive element has a visible focus state using `color.brand.primary`.
@@ -316,7 +328,7 @@ Rules
 
 ---
 
-## 9. Changing the system
+## 10. Changing the system
 
 1. Change it in Figma.
 2. Make the same change here.

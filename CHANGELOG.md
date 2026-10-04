@@ -31,11 +31,13 @@ First release of Frame.
   - Elevation: `shadow.xs`–`shadow.2xl`
 - **Components (21)**
   - Actions: Button
-  - Form controls: Input, Textarea, Select, Checkbox, Radio, Toggle
-  - Navigation: Top Nav, Nav Item, Tab Item, Breadcrumb Item
+  - Form controls: Input, Textarea, Select, Checkbox, Radio, Switch
+  - Navigation: Top Nav, Nav Item, Tab, Breadcrumb Item
   - Feedback: Alert, Toast, Tooltip
-  - Data display: Badge, Tag, Avatar, Table Row, List Item, Divider
-  - Containers: Card, Modal
+  - Data display: Badge, Tag, Avatar, Table Row, List Item, Separator
+  - Containers: Card, Dialog
+- **Icons (36)** from Lucide (ISC), as swappable Figma components
+- Component names aligned with shadcn/ui (Switch, Tabs, Separator, Dialog)
 - **Docs**
   - `DESIGN.md` with token tables, component rules and instructions for AI coding agents
   - `tokens.json` in Tokens Studio format, matching the Figma variables
